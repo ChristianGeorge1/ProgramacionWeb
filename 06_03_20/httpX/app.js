@@ -6,9 +6,9 @@ const url = 'https://api.darksky.net/forecast/add880fee823c4a50da5b84764484216/1
 
 request({url, json: true}, (error, response)=>{  //Cuando el key y value tienen el mismo nombre y valor se puede quedar igual.
    
-    console.log(response.body)
-    let convertido = convert(response.body.currently.temperature).toFixed(2)
-    let temperaturaF = response.body.currently.temperature;
+    console.log(response.body) //Object Complete
+    let convertido = convert(response.body.currently.temperature).toFixed(2) //Celsius
+    let temperaturaF = response.body.currently.temperature; //  Fahrenheit
     console.log(`La temperatura en Fahrenheit ${temperaturaF}`)
     console.log(`La temperatura en Celsius:  ${convertido}`)
 
